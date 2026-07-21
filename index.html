@@ -1268,8 +1268,7 @@
 
   </footer> -->
 
-
-<!-- <footer class="footer">
+  <footer class="footer">
 
     <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
       <div class="container">
@@ -1332,14 +1331,9 @@
 
         </ul>
 
-        <form action="https://formsubmit.co/thetawaofficial@gmail.com" method="POST" class="footer-form">
+        <form id="cateringForm" class="footer-form">
 
           <p class="footer-list-title">Enquire for Corporate Catering</p>
-
-          <!-- FormSubmit config: plain email subject line, no captcha, honeypot to block bots -->
-          <input type="hidden" name="_subject" value="New Corporate Catering Enquiry - The Tawa">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="input-wrapper">
 
@@ -1358,9 +1352,10 @@
 
             <select name="total_person" aria-label="Team size" class="input-field">
               <option value="team_size">Team Size</option>
-              <option value="1-10">10-30 People</option>
-              <option value="11-25">30-45 People</option>
-              <option value="50+">45+ People</option>
+              <option value="1-10">1-10 People</option>
+              <option value="11-25">11-25 People</option>
+              <option value="26-50">26-50 People</option>
+              <option value="50+">50+ People</option>
             </select>
 
           </div>
@@ -1375,6 +1370,8 @@
 
           <button type="submit" class="btn">Enquire Now</button>
 
+          <p id="formStatus" style="margin-top: 10px; font-size: 14px;"></p>
+
         </form>
 
       </div>
@@ -1388,50 +1385,7 @@
       </div>
     </div>
 
-  </footer> -->
-
-<form id="cateringForm" class="footer-form">
-
-  <p class="footer-list-title">Enquire for Corporate Catering</p>
-
-  <div class="input-wrapper">
-
-    <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
-      class="input-field">
-
-    <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
-      class="input-field">
-
-  </div>
-
-  <div class="input-wrapper">
-
-    <input type="text" name="company_name" required placeholder="Company Name" aria-label="Company Name"
-      class="input-field">
-
-    <select name="total_person" aria-label="Team size" class="input-field">
-      <option value="team_size">Team Size</option>
-      <option value="1-10">1-10 People</option>
-      <option value="11-25">11-25 People</option>
-      <option value="26-50">26-50 People</option>
-      <option value="50+">50+ People</option>
-    </select>
-
-  </div>
-
-  <div class="input-wrapper">
-
-    <input type="date" name="booking_date" aria-label="Preferred date" class="input-field">
-
-  </div>
-
-  <textarea name="message" required placeholder="Tell us about your requirements" aria-label="Message" class="input-field"></textarea>
-
-  <button type="submit" class="btn">Enquire Now</button>
-
-  <p id="formStatus" style="margin-top: 10px; font-size: 14px;"></p>
-
-</form>
+  </footer>
 
 <script>
   const cateringForm = document.getElementById('cateringForm');
@@ -1460,6 +1414,7 @@
     });
   });
 </script>
+
 
   <!-- 
     - #BACK TO TOP
