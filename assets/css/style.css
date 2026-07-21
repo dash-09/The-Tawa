@@ -20,22 +20,22 @@
    * colors
    */
 
-  --rich-black-fogra-29: hsl(210, 26%, 7%);
-  --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
-  --independence_30: hsla(245, 17%, 29%, 0.3);
+  --rich-black-fogra-29: hsl(154, 29%, 20%);   /* was near-black, now deep forest #254336 */
+  --champagne-pink_20: hsla(45, 28%, 80%, 0.2); /* was pink tint, now cream beige tint */
+  --independence_30: hsla(154, 29%, 20%, 0.3);  /* was purple-gray, now deep forest tint */
   --gray-x-11-gray: hsl(0, 0%, 73%);
-  --champagne-pink: hsl(23, 61%, 86%);
+  --champagne-pink: hsl(45, 28%, 80%);          /* was pink, now cream beige #DAD3BE */
   --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(0, 0%, 47%);
-  --deep-saffron: hsl(32, 100%, 59%);
-  --dark-orange: hsl(28, 100%, 58%);
-  --desert-sand: hsl(23, 49%, 82%);
-  --isabelline: hsl(38, 44%, 96%);
+  --deep-saffron: hsl(149, 13%, 48%);           /* was orange, now sage green #6B8A7A */
+  --dark-orange: hsl(149, 13%, 38%);            /* was orange, now darker sage (hover state) */
+  --desert-sand: hsl(56, 18%, 66%);             /* was tan, now sand olive #B7B597 */
+  --isabelline: hsl(45, 30%, 95%);              /* was off-white, now soft cream */
   --gainsboro: hsl(0, 0%, 87%);
-  --tangerine: hsl(31, 84%, 50%);
-  --cinnabar: hsl(3, 90%, 55%);
+  --tangerine: hsl(56, 20%, 50%);               /* was orange, now muted olive-gold */
+  --cinnabar: hsl(15, 45%, 42%);                /* was red, now muted terracotta/rust */
   --black_95: hsla(0, 0%, 0%, 0.95);
-  --cultured: hsl(0, 0%, 93%);
+  --cultured: hsl(45, 15%, 94%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --onyx: hsl(0, 0%, 27%);
@@ -86,8 +86,6 @@
   --clip-path-2: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
 
 }
-
-
 
 
 
@@ -254,9 +252,9 @@ body.active { overflow: hidden; }
   background-position: bottom;
 }
 
-.section-divider.white::after { background-image: url("../images/shape-white.png"); }
+/* .section-divider.white::after { background-image: url("../images/shape-white.png"); } */
 
-.section-divider.gray::after { background-image: url("../images/shape-grey.png"); }
+/* .section-divider.gray::after { background-image: url("../images/shape-grey.png"); } */
 
 .w-100 { width: 100%; }
 
@@ -556,7 +554,10 @@ body.active { overflow: hidden; }
   margin-inline: auto;
 }
 
-.hero .btn { margin-inline: auto; }
+.hero .btn {
+  margin-top: 72px;
+  margin-left : 1500px;
+}
 
 .hero .btn:is(:hover, :focus) {
   background-color: var(--white);
