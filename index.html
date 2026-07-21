@@ -1269,7 +1269,7 @@
   </footer> -->
 
 
-<footer class="footer">
+<!-- <footer class="footer">
 
     <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
       <div class="container">
@@ -1388,9 +1388,78 @@
       </div>
     </div>
 
-  </footer>
+  </footer> -->
 
+<form id="cateringForm" class="footer-form">
 
+  <p class="footer-list-title">Enquire for Corporate Catering</p>
+
+  <div class="input-wrapper">
+
+    <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+      class="input-field">
+
+    <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+      class="input-field">
+
+  </div>
+
+  <div class="input-wrapper">
+
+    <input type="text" name="company_name" required placeholder="Company Name" aria-label="Company Name"
+      class="input-field">
+
+    <select name="total_person" aria-label="Team size" class="input-field">
+      <option value="team_size">Team Size</option>
+      <option value="1-10">1-10 People</option>
+      <option value="11-25">11-25 People</option>
+      <option value="26-50">26-50 People</option>
+      <option value="50+">50+ People</option>
+    </select>
+
+  </div>
+
+  <div class="input-wrapper">
+
+    <input type="date" name="booking_date" aria-label="Preferred date" class="input-field">
+
+  </div>
+
+  <textarea name="message" required placeholder="Tell us about your requirements" aria-label="Message" class="input-field"></textarea>
+
+  <button type="submit" class="btn">Enquire Now</button>
+
+  <p id="formStatus" style="margin-top: 10px; font-size: 14px;"></p>
+
+</form>
+
+<script>
+  const cateringForm = document.getElementById('cateringForm');
+  const formStatus = document.getElementById('formStatus');
+
+  cateringForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(cateringForm);
+    formStatus.textContent = 'Sending...';
+
+    fetch('https://formsubmit.co/ajax/thetawaofficial@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    })
+    .then(response => response.json())
+    .then(() => {
+      formStatus.textContent = 'Thank you! Your enquiry has been sent.';
+      formStatus.style.color = 'green';
+      cateringForm.reset();
+    })
+    .catch(() => {
+      formStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+      formStatus.style.color = 'red';
+    });
+  });
+</script>
 
   <!-- 
     - #BACK TO TOP
